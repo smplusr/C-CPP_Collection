@@ -1,6 +1,6 @@
 # CPP_Collection
 
-Collection of CPP scripts:
+Collection of C++ projects:
 
 -----------------------------------------------------------------------------------------------------
 
@@ -17,3 +17,6 @@ LINK: https://www.khronos.org/opengl/wiki/Tutorial:_OpenGL_3.0_Context_Creation_
 
 -----------------------------------------------------------------------------------------------------
 
+# glfw-cpp-example-cube
+
+Testing GLFW library and compiling for windows 
