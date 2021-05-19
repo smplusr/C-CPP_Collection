@@ -20,3 +20,15 @@ LINK: https://www.khronos.org/opengl/wiki/Tutorial:_OpenGL_3.0_Context_Creation_
 # glfw-cpp-example-cube
 
 Testing GLFW library and compiling for windows 
+
+-----------------------------------------------------------------------------------------------------
+
+# sfml-base-project
+
+Base for all SFML projects (all libraries included)
+
+-----------------------------------------------------------------------------------------------------
+
+# sdl-cpp-base-project
+
+Base for all SDL projects (all libraries included)
