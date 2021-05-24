@@ -4,6 +4,12 @@ Collection of C++ projects:
 
 -----------------------------------------------------------------------------------------------------
 
+# glfw-cpp-example-cube
+
+Testing GLFW library and compiling for windows  [Linux & Windows]
+
+-----------------------------------------------------------------------------------------------------
+
 # glx-cpp-example-cube
 
 Example OpenGL Project using OpenGL GLX drawing methods to render a spining cube. [Linux Only]
@@ -18,9 +24,9 @@ LINK: https://www.khronos.org/opengl/wiki/Tutorial:_OpenGL_3.0_Context_Creation_
 
 -----------------------------------------------------------------------------------------------------
 
-# glfw-cpp-example-cube
+# sdl-cpp-base-project
 
-Testing GLFW library and compiling for windows  [Linux & Windows]
+Base for all SDL projects (all libraries included) [Linux Only]
 
 -----------------------------------------------------------------------------------------------------
 
@@ -33,10 +39,3 @@ Base for all SFML projects (all libraries included) [Linux Only]
 # sfml-base-project
 
 Drawing a rotating Cube using sfml-base-project's setup (also including OpenGL and GLU in include/GL) [Linux Only]
-
------------------------------------------------------------------------------------------------------
-
-# sdl-cpp-base-project
-
-Base for all SDL projects (all libraries included) [Linux Only]
-
