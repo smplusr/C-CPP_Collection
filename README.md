@@ -30,6 +30,13 @@ Base for all SFML projects (all libraries included) [Linux Only]
 
 -----------------------------------------------------------------------------------------------------
 
+# sfml-base-project
+
+Drawing a rotating Cube using sfml-base-project's setup (also including OpenGL and GLU in include/GL) [Linux Only]
+
+-----------------------------------------------------------------------------------------------------
+
 # sdl-cpp-base-project
 
 Base for all SDL projects (all libraries included) [Linux Only]
+
