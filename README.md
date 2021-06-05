@@ -36,6 +36,12 @@ Base for all SFML projects (all libraries included) [Linux Only]
 
 -----------------------------------------------------------------------------------------------------
 
-# sfml-base-project
+# sfml-example-cube
 
 Drawing a rotating Cube using sfml-base-project's setup (also including OpenGL and GLU in include/GL) [Linux Only]
+
+-----------------------------------------------------------------------------------------------------
+
+# sfml-example-console
+
+Starting from sfml-example-cube and adding a developper console [Linux Only]
