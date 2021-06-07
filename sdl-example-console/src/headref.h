@@ -5,6 +5,7 @@
 
 // Including SDL libraries
 #include <../include/SDL2/SDL_opengl.h>
+#include <../include/SDL2/SDL_ttf.h>
 #include <../include/SDL2/SDL.h>
 
 // Including GLU
@@ -18,4 +19,4 @@
 #include "modules/console/drawlog.h"
 
 // Loading assets
-#include "assets/loadorder.h"
+#include "assets/loadorder.hpp"
