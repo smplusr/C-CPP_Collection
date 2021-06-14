@@ -1,3 +1,9 @@
+#ifndef SCREENLOGGER_H
+#define SCREENLOGGER_H
+
+#include <../include/SDL2/SDL_ttf.h>
+#include <../src/modules/engine/display.h>
+
 class ScreenLogger
 {
 	public:
@@ -109,3 +115,5 @@ class ScreenLogger
 			glPopMatrix();
 		}
 };
+
+#endif

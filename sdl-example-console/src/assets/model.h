@@ -1,4 +1,7 @@
-//#include "../modules/misc/reflector.h"
+#ifndef MODEL_H
+#define MODEL_H
+
+std::vector<GameObject*> GameObject::objectArray;
 
 class TemplateObject: public GameObject
 {
@@ -22,8 +25,6 @@ class Plane: public GameObject
 		void Update()
 		{
 			glPushMatrix();
-			glRotatef(0.f, 0.f, 0.f, 0.f);
-			glTranslatef(0.f, 0.f, 0.f);
 			glBegin(GL_QUADS);
 				glColor3f(0.8f, 0.8f, 0.8f);
 				glVertex3f(-1.f, -1.f, -1.f);
@@ -57,11 +58,11 @@ class Cube: public GameObject
 		Draw();
 		glPopMatrix();
 	}
-	void SetPos(float x, float y, float z)
+	void SetPos(float p_x, float p_y, float p_z)
 	{
-		m_x = x;
-		m_y = y;
-		m_z = z;
+		m_x = p_x;
+		m_y = p_y;
+		m_z = p_z;
 	}
 	float GetPos(char p_axes){
 		if(p_axes == 'x')
@@ -126,3 +127,5 @@ class Cube: public GameObject
 		float m_y;
 		float m_z;
 };
+
+#endif

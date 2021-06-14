@@ -1,19 +1,22 @@
+#include <iostream>
 #include "headref.h"
+
+GameObject* cube_instance = new Cube();
+GameObject* plane_instance = new Plane();
 
 Uint32 start_time, frame_time;
 float fps;
 
-float timerr;
-
 void render()
 {
-	timerr += .005f;
 	for(unsigned int i = 0; i < GameObject::getAllObjects().size(); i++)
 	{
 		GameObject::getAllObjects()[i] -> Update();
-		GameObject::getAllObjects()[i] -> SetPos(0.f, timerr, 0.f);
+		float tmpPos = GameObject::getAllObjects()[i] -> GetPos('y');
+		GameObject::getAllObjects()[i] -> SetPos(0.f, tmpPos += 0.005, 0.f);
+		
 	}
-
+	
 }
 
 void FpsCalcInit()
@@ -55,7 +58,6 @@ int main(int argc, char* argv[])
 		glLoadIdentity();
 
 		Console::Update();
-		
 			
 		Camera::Translate(keyState);
 		Camera::Rotate(keyState);

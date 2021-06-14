@@ -1,3 +1,10 @@
+#ifndef DISPLAY_H
+#define DISPLAY_H
+
+#include <../include/SDL2/SDL_opengl.h>
+#include <../include/SDL2/SDL.h>
+#include <../include/GL/glu.h>
+
 class Display
 {
 	public:
@@ -69,5 +76,6 @@ class Display
 		float m_aspect = 1.f;
 		float m_nearClipPlane = .1f;
 		float m_farClipPlane = 500.f;
-
 };
+
+#endif

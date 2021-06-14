@@ -1,3 +1,8 @@
+#ifndef CAMERA_H
+#define CAMERA_H
+
+#include <../include/SDL2/SDL.h>
+
 class Camera
 {
 	public:
@@ -111,3 +116,5 @@ class Camera
 		float m_positionY;
 		float m_positionZ = 2.f;
 };
+
+#endif
