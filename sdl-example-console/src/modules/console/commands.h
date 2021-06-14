@@ -22,6 +22,25 @@ void gluFunction(std::string p_argument)
 	}
 }
 
+/*
+void objFunction(std::string p_argument)
+{
+	if(p_argument.find("SetPos") != std::string::npos)
+	{
+		if(p_argument.find("reset") != std::string::npos)
+			for(unsigned int i = 0; i < GameObject::getAllObject().size(); i++)
+				GameObject::getAllObject()[i] -> SetPos(0.f, 0.f, 0.f);
+		
+	//	if(p_argument.find("x") != std::string::npos)
+	//	{
+	//		if(p_argument.find("increase") != std::string::npos)
+	//			GameObject::getAllObject()[i] -> SetPos()
+	//	}
+
+	}
+}
+*/
+
 void glFunction(std::string p_argument)
 {	
 	if(p_argument.find("glPolygonMode") != std::string::npos)

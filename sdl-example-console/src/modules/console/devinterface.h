@@ -1,5 +1,3 @@
-#include "lookuptable.h"
-
 class Console
 {
 	public: 

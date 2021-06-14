@@ -1,7 +1,25 @@
-class Plane
+//#include "../modules/misc/reflector.h"
+
+class TemplateObject: public GameObject
 {
 	public:
-		void draw()
+		TemplateObject(){}
+		virtual ~TemplateObject(){}
+	
+		virtual void Update()
+		{
+			TemplateObject::consolePrint();
+		}
+
+	private:
+		void consolePrint(){std::cout << "Hello World !" << std::endl;}
+
+};
+
+class Plane: public GameObject
+{
+	public:
+		void Update()
 		{
 			glPushMatrix();
 			glRotatef(0.f, 0.f, 0.f, 0.f);
@@ -15,15 +33,16 @@ class Plane
 			glEnd();
 			glPopMatrix();
 		}
+		void Move(){}
 };
 
-class Cube
+class Cube: public GameObject
 {
 	private:
 		float m_angle = 0;
 		bool m_placed = false;
 	public:
-	void update()
+	void Update()
 	{	
 		if(!m_placed)
 			glTranslatef(0.f, 0.f, -1.33f);
@@ -31,13 +50,29 @@ class Cube
 
 		m_angle += 0.4;
 		glPushMatrix();	
+		glTranslatef(m_x, m_y, m_z);
 		glRotatef(m_angle, 1.f, 0.f, 0.f);
 		glRotatef(m_angle, 0.f, 1.f, 0.f);
 		glRotatef(m_angle, 0.f, 0.f, 1.f);
-		draw();
+		Draw();
 		glPopMatrix();
 	}
-	void draw()
+	void SetPos(float x, float y, float z)
+	{
+		m_x = x;
+		m_y = y;
+		m_z = z;
+	}
+	float GetPos(char p_axes){
+		if(p_axes == 'x')
+			return m_x;
+		if(p_axes == 'y')
+			return m_y;
+		if(p_axes == 'z')
+			return m_z;
+		return 0;
+	}
+	void Draw()
 	{
 		glBegin(GL_QUADS);
 	 
@@ -86,4 +121,8 @@ class Cube
 		// End of GL calls
 		glEnd();
 	}
+	private:
+		float m_x;
+		float m_y;
+		float m_z;
 };

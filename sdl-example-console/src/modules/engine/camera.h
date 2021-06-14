@@ -56,14 +56,20 @@ class Camera
 		{
 			if(p_keyState[SDL_SCANCODE_UP])
 			{	
-				m_angleY += m_rotSpeed;
-				m_directionY = tan(m_angleY);
+				if(m_angleY < m_maxY)
+				{
+					m_angleY += m_rotSpeed;
+					m_directionY = tan(m_angleY);
+				}
 			}
 
 			if(p_keyState[SDL_SCANCODE_DOWN])
 			{
-				m_angleY -= m_rotSpeed;
-				m_directionY = tan(m_angleY);
+				if(m_angleY > m_minY)
+				{
+					m_angleY -= m_rotSpeed;
+					m_directionY = tan(m_angleY);
+				}
 			}
 
 			if(p_keyState[SDL_SCANCODE_LEFT])
@@ -96,6 +102,8 @@ class Camera
 		float m_rotSpeed = .02f;
 		float m_angleX;
 		float m_angleY;
+		float m_maxY = 1.5f;
+		float m_minY = -1.5f;
 		float m_directionX;
 		float m_directionY;
 		float m_directionZ = -.5f;

@@ -1,15 +1,19 @@
 #include "headref.h"
 
-Cube cube;
-Plane plane;
-
 Uint32 start_time, frame_time;
 float fps;
 
+float timerr;
+
 void render()
-{	
-	cube.update();
-	plane.draw();
+{
+	timerr += .005f;
+	for(unsigned int i = 0; i < GameObject::getAllObjects().size(); i++)
+	{
+		GameObject::getAllObjects()[i] -> Update();
+		GameObject::getAllObjects()[i] -> SetPos(0.f, timerr, 0.f);
+	}
+
 }
 
 void FpsCalcInit()
@@ -45,6 +49,8 @@ int main(int argc, char* argv[])
 			Console::KeyToChar(event);
 		}
 
+	//	FpsCalcInit();
+
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
 
@@ -63,6 +69,8 @@ int main(int argc, char* argv[])
 			ScreenLogger::RenderText(Console::GetCharacters().insert(0, "> "), {255, 255, 255}, 0, 0, "../src/assets/font/arial.ttf", 12);
 
 		SDL_GL_SwapWindow(window);
+
+	//	FpsCalc();
 	}
 	
 	SDL_GL_DeleteContext(context);
