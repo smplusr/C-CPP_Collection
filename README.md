@@ -10,9 +10,15 @@ Testing GLFW library and compiling for windows  [Linux & Windows]
 
 -----------------------------------------------------------------------------------------------------
 
+# glut-cursor-move
+
+Using glut to move the cursor using arrow keys  [Linux & Windows]
+
+-----------------------------------------------------------------------------------------------------
+
 # glx-cpp-example-cube
 
-Example OpenGL Project using OpenGL GLX drawing methods to render a spining cube. [Linux Only]
+Example OpenGL Project using OpenGL GLX drawing methods to render a spining cube [Linux Only]
 
 This project is about testing OpenGL compatibility on linux OSes and old GPUs. 
 No external third party library is required since the project is using the X window system and by extension, GLX to create the OpenGL context.
