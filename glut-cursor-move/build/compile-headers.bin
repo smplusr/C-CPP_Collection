@@ -1,0 +1,7 @@
+echo ""
+echo "compiling pch.h"
+time gcc ../src/pch.h
+
+echo ""
+echo "compiling rcp.h"
+time gcc ../src/rcp.h

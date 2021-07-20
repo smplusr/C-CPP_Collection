@@ -1,0 +1,6 @@
+echo ""
+echo "compiling main source file"
+
+time gcc ../src/*.c -o ../bin/a.out -lGL -lGLU -lglut
+
+echo ""
