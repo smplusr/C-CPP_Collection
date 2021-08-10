@@ -4,6 +4,14 @@ Collection of C++ projects:
 
 -----------------------------------------------------------------------------------------------------
 
+# egl-x11-example-triangle
+
+Program example using EGL and OpenGL ES 2 api with Xlib for window creation  [Linux Only]
+See https://github.com/grate-driver/grate/blob/master/tests/gles2/egl-x11-triangle.c
+for more information about the origin of the example (and how it works inside a single file).
+
+-----------------------------------------------------------------------------------------------------
+
 # glfw-cpp-example-cube
 
 Testing GLFW library and compiling for windows  [Linux & Windows]
